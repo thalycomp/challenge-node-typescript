@@ -1,5 +1,8 @@
 import app from './app';
 
-app.listen(3333, () => {
+const { PORT } = process.env;
+const port = 3333 || PORT;
+
+app.listen(port, () => {
   console.log('Server OK');
 });
